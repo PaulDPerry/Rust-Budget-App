@@ -16,28 +16,27 @@ cargo run
 
 ### Project Layout
 budget-app/
-├── Cargo.toml
 ├── README.md
 ├── .gitignore
 ├── src/
 │   ├── main.rs
 │   ├── app.rs              # App state & orchestration
 │   │
-│   ├── models/            # Data structures
+│   ├── models/             # Data structures
 │   │   ├── mod.rs
 │   │   ├── transaction.rs
 │   │   ├── budget.rs
 │   │   └── category.rs
 │   │
-│   ├── storage/           # Persistence layer
+│   ├── storage/            # Persistence layer
 │   │   ├── mod.rs
-│   │   └── json.rs        # Start simple (serde)
+│   │   └── json.rs         # Start simple (serde)
 │   │
-│   ├── services/          # Business logic
+│   ├── services/           # Business logic
 │   │   ├── mod.rs
 │   │   └── budget_service.rs
 │   │
-│   ├── ui/                # CLI / TUI later
+│   ├── ui/                 # CLI / TUI later
 │   │   ├── mod.rs
 │   │   └── cli.rs
 │   │
@@ -46,4 +45,4 @@ budget-app/
 │       └── helpers.rs
 │
 └── data/
-    └── budget.json        # local storage file
+    └── budget.json         # Local storage file
