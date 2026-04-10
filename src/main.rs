@@ -1,6 +1,9 @@
 mod models;
 use models::Transaction;
 use chrono::NaiveDate;
+use models::Category;
+use models::Direction;
+
 // mod services;
 // mod storage;
 // mod ui;
@@ -15,7 +18,8 @@ fn main() {
         String::from("test"),
         50.00,
         now,
-        String::from("Food")
+        Category::EatingOut,
+        Direction::Expense
     );
 
     test.print_transaction();
