@@ -1,4 +1,5 @@
 use std::fmt;
+#[derive(Clone, Copy)]
 pub enum Category{
   Groceries,
   EatingOut,
@@ -10,7 +11,7 @@ pub enum Category{
 impl fmt::Display for Category {
   fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result{
     match self{
-      Category::Groceries => write!(f, "Groceris"),
+      Category::Groceries => write!(f, "Groceries"),
       Category::EatingOut => write!(f, "Eating Out"),
       Category::Housing => write!(f, "Housing"),
       Category::Auto => write!(f, "Auto"),
@@ -18,7 +19,7 @@ impl fmt::Display for Category {
     }
   }
 }
-
+#[derive(Clone, Copy)]
 pub enum Direction {
   Income,
   Expense

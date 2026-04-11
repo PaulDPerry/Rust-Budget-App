@@ -1,7 +1,6 @@
 use chrono::NaiveDate;
 use crate::models::category::{Category, Direction};
 
-
 pub struct Transaction{
   pub id: u32,
   pub description: String,
@@ -22,7 +21,7 @@ impl Transaction{
       direction,
     }
   }
-  pub fn print_transaction(self){
+  pub fn display(&self){
     println!("ID: {}", self.id);
     println!("Description: {}", self.description);
     println!("Ammount: {}", self.ammount);

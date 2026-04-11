@@ -3,6 +3,8 @@ use models::Transaction;
 use chrono::NaiveDate;
 use models::Category;
 use models::Direction;
+use models::Budget;
+use models::Period;
 
 // mod services;
 // mod storage;
@@ -22,5 +24,13 @@ fn main() {
         Direction::Expense
     );
 
-    test.print_transaction();
+    let test_budget:Budget = Budget::new(
+        Category::EatingOut,
+        400,
+        Period::Monthly
+    );
+
+    test.display();
+    println!();
+    test_budget.display();
 }
