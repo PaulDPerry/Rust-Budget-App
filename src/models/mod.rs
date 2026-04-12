@@ -1,4 +1,4 @@
-mod transaction;
+pub mod transaction;
 mod category;
 mod  budget;
 pub use transaction::Transaction;

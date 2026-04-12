@@ -6,14 +6,41 @@ use models::Direction;
 use models::Budget;
 use models::Period;
 
+use crate::models::transaction;
+use crate::storage::load;
+use crate::storage::save;
+
 // mod services;
-// mod storage;
+mod storage;
 // mod ui;
 // mod utils;
-// mod app;
+mod app;
 fn main() {
-    //let mut app = app::App::new();
+    //let app = app::App::new();
     //app.run();
+
+    /*
+    let now = NaiveDate::from_ymd_opt(2026, 4, 6).unwrap();
+    let test = Transaction::new(
+        1,
+        String::from("test"),
+        50.00,
+        now,
+        Category::EatingOut,
+        Direction::Expense
+    );
+    let transactions = vec![test];
+    save(&transactions);
+    */
+
+    load();
+
+
+
+
+
+    //Sandbox
+    /*
     let now = NaiveDate::from_ymd_opt(2026, 4, 6).unwrap();
     let test = Transaction::new(
         1,
@@ -33,4 +60,5 @@ fn main() {
     test.display();
     println!();
     test_budget.display();
+   */
 }

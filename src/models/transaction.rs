@@ -1,6 +1,8 @@
 use chrono::NaiveDate;
 use crate::models::category::{Category, Direction};
+use serde::{Serialize,Deserialize};
 
+#[derive(Serialize,Deserialize)]
 pub struct Transaction{
   pub id: u32,
   pub description: String,

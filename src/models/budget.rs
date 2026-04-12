@@ -1,5 +1,9 @@
 use std::fmt;
 use crate::models::category::Category;
+use serde::{Serialize,Deserialize};
+
+
+#[derive(Serialize,Deserialize)]
 pub struct Budget{
  pub category : Category,
  pub limit : i32,
@@ -22,6 +26,7 @@ impl Budget {
   }
 }
 
+#[derive(Serialize,Deserialize)]
 pub enum Period {
   Weekly,
   Monthly

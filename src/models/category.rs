@@ -1,5 +1,9 @@
 use std::fmt;
-#[derive(Clone, Copy)]
+use serde::{Serialize,Deserialize};
+
+
+
+#[derive(Clone, Copy,Serialize,Deserialize)]
 pub enum Category{
   Groceries,
   EatingOut,
@@ -19,7 +23,7 @@ impl fmt::Display for Category {
     }
   }
 }
-#[derive(Clone, Copy)]
+#[derive(Clone, Copy,Serialize,Deserialize)]
 pub enum Direction {
   Income,
   Expense

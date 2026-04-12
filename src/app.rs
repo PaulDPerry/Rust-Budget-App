@@ -6,7 +6,7 @@ pub struct App{
 
 impl App {
     pub fn new() -> Self{
-      let transactions = json::load().unwrap_or_default();
+      let transactions = json::load();
       Self { transactions }
     }
 }
