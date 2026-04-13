@@ -2,10 +2,10 @@ use crate::models::Transaction;
 use serde_json;
 
 //Reading from json
-pub fn load() -> Vec<Transaction>{
-  let json_string = std::fs::read_to_string("data/ledger.json").unwrap();
-  let transactions: Vec<Transaction> = serde_json::from_str(&json_string).unwrap();
-  return  transactions;
+pub fn load() -> Option<Vec<Transaction>>{
+  let json_string = std::fs::read_to_string("data/ledger.json").ok()?;
+  let transactions: Vec<Transaction> = serde_json::from_str(&json_string).ok()?;
+  Some(transactions)
 }
 
 //Write to json

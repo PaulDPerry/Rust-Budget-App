@@ -16,24 +16,24 @@ mod storage;
 // mod utils;
 mod app;
 fn main() {
-    //let app = app::App::new();
+    let app = app::App::new();
     //app.run();
 
-    /*
-    let now = NaiveDate::from_ymd_opt(2026, 4, 6).unwrap();
-    let test = Transaction::new(
-        1,
-        String::from("test"),
-        50.00,
-        now,
-        Category::EatingOut,
-        Direction::Expense
-    );
-    let transactions = vec![test];
-    save(&transactions);
-    */
 
-    load();
+    // let now = NaiveDate::from_ymd_opt(2026, 4, 6).unwrap();
+    // let test = Transaction::new(
+    //     1,
+    //     String::from("test"),
+    //     50.00,
+    //     now,
+    //     Category::EatingOut,
+    //     Direction::Expense
+    // );
+    // let transactions = vec![test];
+    // save(&transactions);
+
+
+    // load();
 
 
 
