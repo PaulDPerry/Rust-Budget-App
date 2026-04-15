@@ -12,7 +12,7 @@ use crate::storage::save;
 
 // mod services;
 mod storage;
-// mod ui;
+mod ui;
 // mod utils;
 mod app;
 fn main() {

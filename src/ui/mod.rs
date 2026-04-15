@@ -1,3 +1,2 @@
-pub trait UserInterface{
-  fn run(&mut self, app&mut App);
-}
+pub mod cli;
+pub use cli::Command;
